@@ -4,9 +4,9 @@ set -e
 
 # Generate role
 printf "cookiecutter==1.7.2\nJinja2==2.11.2" > requirements.txt && pipenv install -r requirements.txt && pipenv run cookiecutter . --no-input \
-    app_name="github_cli" \
+    app_name="Test_Run" \
     exec_name="gh" \
-    author="John Doe" \
+    author="HEB Buddy" \
     min_ansible_version="2.2" \
     ansible_version="5.2.0" \
     molecule_version="3.4.0" \
@@ -23,7 +23,7 @@ printf "cookiecutter==1.7.2\nJinja2==2.11.2" > requirements.txt && pipenv instal
 (
     # Adjust the role to test
     cd github_cli_role
-    sed -i 's/someuser/cli/g' defaults/main.yml
+    sed -i 's/HEB_BUDDY/cli/g' defaults/main.yml
     sed -i 's/somerepo/cli/g' defaults/main.yml
     sed -i 's/1.0.0/0.6.4/g' defaults/main.yml
     sed -i 's/exampleapplication/gh/g' defaults/main.yml
