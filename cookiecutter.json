@@ -8,7 +8,7 @@
   "author": "Enter Name:",
   "min_ansible_version": "",
   "ansible_version": "latest",
-  "molecule_version": "latest",
+  "molecule_version": "3.4.0",
   "python_docker_version": "latest",
   "molecule_docker_version": "latest",
   "ansible_lint_version":"latest",
